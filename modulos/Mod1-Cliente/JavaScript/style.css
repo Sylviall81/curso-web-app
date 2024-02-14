@@ -75,6 +75,7 @@ button:hover{
     margin:3px;
     padding: 4px;
     inline-size: 40%;
+    overflow: hidden;
   
     
 }
@@ -100,7 +101,7 @@ button:hover{
     }
 
     .mini-container{
-        inline-size: 15%;
+        inline-size: 20%;
         /* overflow:scroll; */
     }
         
