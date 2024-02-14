@@ -1,0 +1,81 @@
+/*
+Crear una página web con un título y 3 párrafos. 
+El título en rojo y con un margen por debajo de 10px, de tipo arial, centrado y fuente de 35px. 
+
+Párrafo 1 de 800px de anchura y letra verdana. 
+
+Párrafo 2 de 800px de anchura, letra verdana, 
+bordes superior e inferior de color rojo, bordes laterales de color verde, fondo de color gris oscuro, 
+letra blanco y margen interior de 10px. 
+
+Párrafo 3 de 800px de anchura y letra verdana. 
+
+La distancia entre párrafos es de 20px. ¿Como se consigue centrar los margenes laterales? 
+
+Para ello: redefinir estilo de H1, P y crear una clase específica. 
+
+*/
+
+
+
+h1 {
+    color: red;
+    margin: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    text-align: center;
+   
+}
+
+
+
+p {
+    
+    width: 800px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+
+}
+
+.special-content {
+    border: solid red 5px;
+    border-left: green solid 5px;
+    border-right: green solid 5px;
+    background-color: darkgrey;
+    color: white;
+    width: 800px;
+    padding: 10px;
+    margin: 20px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.boton{
+    display:block;
+    width: 9vw;
+    height: 4vh;
+    background-color: navy;
+    font-family: arial;
+    font-weight: bold;
+    color:white;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3.5px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.boton:hover {
+    background-color: darkmagenta;
+    color:greenyellow;
+}

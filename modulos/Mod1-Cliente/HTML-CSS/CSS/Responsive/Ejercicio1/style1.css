@@ -1,0 +1,31 @@
+* {
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+a {
+    color: lightskyblue;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+.container{
+    padding: 10px;
+   
+}
+
+
+@media all and (min-width: 768px) {
+
+    /*estilos para anchos
+    superiores a 768 */
+
+    .first-paragraph {
+        width:20%;
+        margin-right: 4%;
+        float: left;
+    }
+
+    
+}

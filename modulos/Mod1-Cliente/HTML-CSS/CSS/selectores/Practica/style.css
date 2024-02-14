@@ -1,0 +1,104 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+} /*selector universal las reglas definidas se aplica a todo el documento*/
+
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+} /* selector de elemento las reglas definidas se aplican solo a esa etiqueta*/
+
+.parrafo-especial{
+    background-color:green;
+
+} /*selector de clase las reglas se aplican solo a aquellos elementos que se les haya asigando esa clase*/
+
+
+#container>h2{
+    color:orange;
+    /* position:relative; */
+}
+
+h2+p {
+    background-color: blueviolet;
+}/*selector adyacente va a buscar todos los p hermanos de un h2 o precedidos de un h2 
+y les aplica las reglas, SOLO aplica la regla al adyacente al hermano en este caso al P */
+
+span.parrafo-especial{
+    color:white;
+    font-size: 2em;
+}/*buscar todas las etiquetas o elemetos span que tengan esa clase concreta y aplica las reglas*/
+
+#container{
+
+    border: black dotted 3px;
+    margin: 5%;
+    padding: 3%;
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+
+}/*selector de id aplica la regla al elemeto q se le haya asigando ese id -el id es unico-*/
+
+
+#container>
+
+#container span{
+    text-decoration: underline;
+} /* selector descendiente a todos los span hijos del container le dara una caracteristica segun la regla*/
+
+
+/*Pseudoclases*/
+
+ul li:first-child{
+    text-decoration: line-through;
+} 
+
+ul li:nth-child(3){
+    text-decoration:underline;
+} /*N hijo en este caso 3ero (num prentesis)*/
+
+ul li:nth-child(4n){
+    background-color: yellowgreen;
+} /*cada 4 elementos aplica la regla*/
+
+ul li:nth-child(3n+1){
+    background-color: yellow;
+} /*cada 2 elementos aplica la regla(se aplica al 4o*/
+
+
+
+ul li:last-child{
+    color: red;
+} /*ultimo hijo*/
+
+
+/* pseudo elemento para afectar la primera linea o la primera letra*/
+
+p::first-letter{
+    color: blue;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+article::first-line{
+    font-size: 1.5em;
+} /* me modifica la primera linea de article q en este caso es un h2*/
+
+
+
+/* Pseudo elemento para introducir algo a traves de css antes de un elemento o despues de un elemento*/
+
+h1::before {
+    content: "INTRO";
+    font-size: 3em;
+    color:red;
+    /* position: absolute;
+    top:8%; */
+}
+
+h1::after {
+    content: "subtitulo";
+    font-size: 0.5em;
+    color:red;
+}
+
+

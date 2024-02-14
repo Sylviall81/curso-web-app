@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones basicas</title>
+</head>
+<body>
+
+    <p>Suma y muestra</p>
+
+    <p id="resultado"></p>
+
+
+    <script>
+
+        //Se declaran las variables 
+        var resultado;
+        var numUser1 = 90;
+        var numUser2 = 5;
+
+       
+
+        //se define la funcion
+
+        function suma_y_muestra(num1, num2 = 3){
+            resultado= num1+num2;
+            alert(resultado)
+            document.getElementById('resultado').innerHTML = resultado
+        }
+
+        //se llama la función
+        suma_y_muestra(numUser1, numUser2)
+
+        //si se cambian los valores de las variables o se insertan otros argumentos vale
+        suma_y_muestra(2,66);
+
+        //si tu metes un solo param el otro lo toma como falso es un parametro x defecto o si lo configuras tambien se puede
+        suma_y_muestra(6) //esto da nueve xq me toma el valor x defecto
+
+
+
+
+
+    </script>
+</body>
+</html>

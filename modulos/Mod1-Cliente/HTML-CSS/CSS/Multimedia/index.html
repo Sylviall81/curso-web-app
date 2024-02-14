@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;600;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style2.css">
+</head>
+
+<body>
+    <div id="top" class="container">
+        <h1>Ejercicios Multimedia</h1>
+
+        <ul class="menu">
+            <li><a href="#ejercicio1">Ejercicio 1</a></li>
+            <li><a href="#ejercicio2">Ejercicio 2</a></li>
+            <li><a href="#ejercicio3">Ejercicio 3</a></li>
+            <li><a href="#ejercicio4">Ejercicio 4</a></li>
+            <li><a href="#ejercicio5">Ejercicio 5</a></li>
+            <li><a href="#ejercicio6">Ejercicio 6</a></li>
+            <li><a href="#ejercicio7">Ejercicio 7</a></li>
+        </ul>
+
+        <div id="ejercicio1" class="content-section">
+            <h3>Ejercicio 1 : Video con texto en superposición</h3>
+            <h4>superposicion de texto con capas (:before :after)</h4>
+
+            <p>I. Video cargado etiqueta video</p>
+            <div class="video-container">
+                <video autoplay muted src="./assets/pexels-florian-delée-19610459 (2160p).mp4"></video>
+
+            </div>
+
+            <p>II. Video Youtube (Iframe)</p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/DsXMR7dY35w?si=etQHykyU-aw9EHfx&amp;controls=0"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+
+            </div>
+        </div>
+            <a href="#top">Volver arriba 🔝</a>
+
+        <div class="content-section" id="ejercicio2">
+                <h3>Ejercicio 2: Filas alternas</h3>
+                <h4>Uso de pseudoclase :nth-child()</h4>
+                <div class="table">
+                    <ul class="column-left">
+                        <li>IE</li>
+                        <li>Firefox</li>
+                        <li>Safari</li>
+                        <li>Opera</li>
+                    </ul><ul class="column-right">
+                        <li>Download</li>
+                        <li>Download</li>
+                        <li>Download</li>
+                        <li>Download</li>
+                    </ul>
+
+                </div>
+
+        </div>
+                <a href="#top">Volver arriba 🔝</a>
+
+        <div class="content-section" id="ejercicio3">
+                    <h3>Ejercicio 3:Galería</h3>
+                    <h4>Uso de Z-index + boxshadow+ transform:rotate/translate</h4>
+
+                    <div class="polaroid-frame" id="pic1">
+                        <img class="polaroid-photo" />
+                        <p>Foto 1</p>
+                    </div>
+                    <div class="polaroid-frame" id="pic2">
+                        <img class="polaroid-photo" />
+                        <p>Foto 2</p>
+                    </div>
+                    <div class="polaroid-frame" id="pic3">
+                        <img class="polaroid-photo" />
+                        <p>Foto 3</p>
+                    </div>
+                    <div class="polaroid-frame" id="pic4">
+                        <img class="polaroid-photo" />
+                        <p>Foto 4</p>
+                    </div>
+                    <div class="polaroid-frame" id="pic5">
+                        <img class="polaroid-photo" />
+                        <p>Foto 5</p>
+                    </div>
+                    <div class="polaroid-frame" id="pic6">
+                        <img class="polaroid-photo" />
+                        <p>Foto 6</p>
+                    </div>
+
+
+
+
+                </div>
+                <a href="#top">Volver arriba 🔝</a>
+
+        <div class="content-section" id="ejercicio4">
+                    <h3>Ejercicio 4: Foto apaisada con sombra 3D</h3>
+                    <p>Uso de :before and :after con transform traslate/rotate (deg)</p>
+
+                    <div class="landscape-photo">
+                        
+
+                    </div>
+
+        </div>
+        <a href="#top">Volver arriba 🔝</a>
+
+        <div class="content-section" id="ejercicio5">
+                    <h3>Ejercicio 5: Foto Galeria 2 (:hover)</h3>
+                    <h4>Uso de transciciones</h4>
+                    <p>Pasa el mouse sobre la tarjeta para agrandar la imagen*.
+                        *Nota: hover solo funciona en la version desktop. 
+                        Para tablet y mobile es necesario hacer click</p>
+
+                    <div class="product-card" id="card1">
+                        <img class="product-photo" />
+                        <figcaption>Foto 1</figcaption>
+                    </div>
+                    <div class="product-card" id="card2">
+                        <img class="product-photo" />
+                        <figcaption>Foto 2</figcaption>
+                    </div>
+                    <div class="product-card" id="card3">
+                        <img class="product-photo" />
+                        <figcaption>Foto 3</figcaption>
+                    </div>
+                    <div class="product-card" id="card4">
+                        <img class="product-photo" />
+                        <figcaption>Foto 4</figcaption>
+                    </div>
+
+        </div>
+        <a href="#top">Volver arriba 🔝</a>
+        
+        <div class="content-section" id="ejercicio6">
+                    <h3>Ejercicio 6: Foto Galeria 2 (pseudoclase :target)</h3>
+                    <p>Pasa el mouse sobre la tarjeta para agrandar la imagen*.
+                        *Nota: hover no funciona en tablet ni mobile</p>
+
+                    
+                    <div class="new-card" id="new-card1">
+                        <a href="#close" class="close">X</a>
+                        <a href="#new-card1" >
+                        <img class="product-photo" />
+                        <figcaption>Foto 1</figcaption>
+                    </div></a>
+                    <div class="new-card" id="new-card2">
+                        <a href="#close" class="close">X</a>
+                        <a href="#new-card2">
+                        <img class="product-photo" />
+                        <figcaption>Foto 2</figcaption></a>
+                    </div>
+                    
+                    <div class="new-card" id="new-card3">
+                        <a href="#close" class="close">X</a>
+                        <a href="#new-card3">
+                        <img class="product-photo" />
+                        <figcaption>Foto 3</figcaption> </a>
+                    </div>
+
+                    <div class="new-card" id="new-card4">
+                        <a href="#close" class="close">X</a>
+                        <a href="#new-card4">
+                        <img class="product-photo" />
+                        <figcaption>Foto 4</figcaption>
+                    </div></a>
+
+
+        </div>
+        <a href="#top">Volver arriba 🔝</a>
+
+        <div class="content-section" id="ejercicio7">
+                    <h3>Ejercicio 7: Acordeon (sin JavaScript)</h3>
+                    <h4>Uso de :target</h4>
+
+                    <div class="acordeon-main-container">
+                        <h2>F.A.Q</h2>
+                        
+                        <div class="question"> 
+                            <a href="#answer1"><h2>Pregunta 1 ⬇️</h2></a>
+                        </div>
+                        <div class="answer" id="answer1">
+                            <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, 
+                            minus quis aut minima commodi asperiores error distinctio libero accusamus 
+                            fugiat cumque at animi velit ex consequuntur quo quidem voluptate! Laudantium.
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        </p>
+                        <a  href="#close">Cerrar ⬆</a>
+                        </div>
+                        <div class="question"> 
+                            <a href="#answer2"><h2>Pregunta 2 ⬇️</h2></a>
+                        </div>
+                        <div class="answer" id="answer2">
+                            <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, 
+                            minus quis aut minima commodi asperiores error distinctio libero accusamus 
+                            fugiat cumque at animi velit ex consequuntur quo quidem voluptate! Laudantium.
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, 
+                            minus quis aut minima commodi asperiores error distinctio libero accusamus 
+                            fugiat cumque at animi velit ex consequuntur quo quidem voluptate! Laudantium.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, 
+                            minus quis aut minima commodi asperiores error distinctio libero accusamus 
+                            fugiat cumque at animi velit ex consequuntur quo quidem voluptate! Laudantium.
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, 
+                            minus quis aut minima commodi asperiores error distinctio libero accusamus 
+                            fugiat cumque at animi velit ex consequuntur quo quidem voluptate! Laudantium.
+                        </p>
+                        <a  href="#close">Cerrar ⬆</a>
+                        </div>
+                        <div class="question"> 
+                            <a href="#answer3"><h2>Pregunta 3 ⬇️</h2></a>
+                        </div>
+                        <div class="answer" id="answer3">
+                            <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, 
+                            minus quis aut minima commodi asperiores error distinctio libero accusamus 
+                            fugiat cumque at animi velit ex consequuntur quo quidem voluptate! Laudantium.
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, 
+                            minus quis aut minima commodi asperiores error distinctio libero accusamus 
+                            fugiat cumque at animi velit ex consequuntur quo quidem voluptate! Laudantium.
+                        </p>
+                        <a  href="#close">Cerrar ⬆</a>
+                        </div>
+                        
+                    </div>
+                        
+
+        </div>
+        <a href="#top">Volver arriba 🔝</a>
+
+        <div class="content-section" id="ejercicio8">
+            <h3>Ejercicio 8: Animaciones </h3>
+            <p>uso de @keyframes</p>
+
+            <div class="animated-photo">
+                
+
+            </div>
+
+            <div class="foto-giratoria">
+
+                FOTO
+                
+
+            </div>
+
+            <a href="#top">Volver arriba 🔝</a>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+            
+    </div>
+
+
+</body>
+
+</html>

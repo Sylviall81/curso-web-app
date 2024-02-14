@@ -1,0 +1,36 @@
+#contenedor {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.img100 {
+	width: 100%;
+}
+header {
+	position: relative;
+}
+h1 {
+	position: absolute;
+	left: 50%;
+	color: white;
+	top: 30%;
+	font-size: 5vw;
+}
+main {
+	width: calc(100% - 204px);
+	display: inline-block;
+	/*float: left;*/
+}
+aside {
+	width: 200px;
+	display: inline-block;
+	vertical-align: top;
+	/*float:  left;*/
+}
+.redes {
+	position: fixed;
+	bottom: 10px;
+}
+.redes img {
+	width: 90%;
+}

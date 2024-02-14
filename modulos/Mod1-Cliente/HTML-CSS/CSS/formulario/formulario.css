@@ -1,0 +1,27 @@
+form {
+	width: 300px;
+	margin-right: auto;
+	margin-left: auto;
+	border:  2px solid orange;
+	padding: 10px;
+}
+input[type="text"],input[type="email"] {
+	width: 290px;
+}
+input:focus,textarea:focus {
+	  outline: 1px solid orange;
+	  border: 1px solid orange;
+}
+textarea {
+	width: 290px;
+	height: 100px;
+}
+label {
+	color: orange;
+}
+input[type="submit"],input[type="reset"] {
+	background-color: orange;
+	color: white;
+} 
+
+

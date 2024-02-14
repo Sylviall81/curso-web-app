@@ -1,0 +1,56 @@
+form {
+	width:  804px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.colizq,.colder {
+	display: inline-block;
+}
+.colizq {
+	width: 150px;
+	background-color: blue;
+	color: white;
+	box-sizing: border-box;
+	padding: 5px;
+	text-align: right;
+	height: 30px;
+}
+.colder {
+	width: 650px;
+	background-color: red;
+	padding: 4px;
+	box-sizing: border-box;
+	height: 30px;
+	vertical-align: bottom;
+}
+.ancho100 {
+	width: calc(100% - 10px);
+}
+.fila {
+	margin-bottom: 3px;
+}
+.idiomas {
+	overflow: hidden;
+	height: 90px;
+	vertical-align: top;
+}
+.fondoazul {
+	background-color: lightblue;
+	width: 100px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.comentarios {
+	height: 90px;
+	vertical-align: top;
+}
+textarea {
+	height: 72px;
+}
+.padding35 {
+	padding-top: 35px;
+}
+
+
+
+

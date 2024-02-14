@@ -1,0 +1,29 @@
+.full-content{
+    width: 100vw;/*1200px es lo usual para desktop*/
+    height: 100vh; /*lo habitual es no trabajar con alturas si no con lo q tenga de contenido*/
+    background-color: lightgrey;
+}
+
+header{
+    background-color: brown;
+    height: 15%;
+}
+
+aside{
+    height:70%;
+    width: 15%;
+    display: inline-block;
+    background-color: blueviolet;
+    /* margin-right: -4px; */
+    box-sizing: border-box;
+}
+.contenido{
+    height:70%;
+    display: inline-block;
+
+
+}
+footer{
+    height: 15%;
+    background-color: aqua;
+}

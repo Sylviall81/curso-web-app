@@ -1,0 +1,97 @@
+* {
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+a {
+    color: lightskyblue;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+.container{
+    padding:20px;
+    /* height:100vh; si le meto este vh no me coge el padding bottom*/
+    margin-right: auto;
+    margin-left: auto;
+   
+}
+
+
+
+.article-image {
+
+    width: 30%;
+    float:right;
+    margin: 1%;
+
+}
+
+
+@media all and (min-width: 768px) {
+
+    /*estilos para anchos
+    superiores a 768 */
+
+    
+
+    .article-content-questions{
+        width:25%;
+        margin-right: 4%;
+        display: inline-block;
+        vertical-align: top;
+        /*Para hacerlo con float:display: 
+        float:left;* tambien puede ser inline-block/
+        *me falto el vertical-align:top;*/
+        /* height: 100%; */
+        
+
+        
+    }
+
+    .article-content-who{
+        display: inline-block;
+        width: calc(100% - 30% );
+        /* float:none; */
+    }
+
+    .article-image {
+        width: 25%;    
+    }
+
+    .secondary-content {
+        display: inline-block;
+        width:49%;
+        /* float:left; */
+        box-sizing: border-box;
+        padding: 1%;
+        overflow-wrap: break-word;
+        vertical-align: top;
+        
+    }
+    
+}
+
+@media all and (min-width: 1024px){
+
+    .container{
+        max-width:1200px;
+    }
+
+
+    .article-image {
+        width: 20%;  
+    }
+
+    .secondary-content {
+        margin-top: 2%;
+        width:25%;
+        float:left;
+        box-sizing: border-box;
+        
+        
+    }
+
+
+}

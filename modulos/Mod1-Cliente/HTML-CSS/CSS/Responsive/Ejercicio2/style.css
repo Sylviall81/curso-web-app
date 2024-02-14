@@ -1,0 +1,68 @@
+*{
+    font-family: 'Work Sans', sans-serif;
+
+}
+
+.full-container{
+    padding:10px;
+    margin-left: auto;
+	margin-right: auto;
+    /* height: 100vh;  */
+    
+}
+
+.header{
+    border:none;
+    background-image: url(./assets/Small_fantasy-2049567_640.jpg) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    width:100%;
+    height:40vh;
+    margin-bottom: 3%;
+}
+
+
+.main-content{
+    width: 100%
+}
+
+
+@media all and (min-width: 768px) { /*estilos para anchos
+    superiores a 768 */ 
+
+    .header{
+        background-image: url(./assets/Medium_fantasy-2049567_1280.jpg) ;
+    }
+
+    .text-content{
+        column-count: 2;
+        column-rule: solid 3px navy;
+        column-gap: 40px;/*hay q ponerle bastante para q se note xq Incluye la medida de la column rule y luego distribuye half and half*/
+        
+    }
+
+
+}
+
+@media all and (min-width: 1200px) { /*estilos para anchos
+    superiores a 1200 */ 
+
+    .header{
+        background-image: url(./assets/Big_fantasy-2049567_1920.jpg) ;
+    }
+
+    .full-container{ /* para que no se estire el contenido infinitamente le pongo un limite al container y lo centro para q en 1400 se pare y no se distorsione*/
+        max-width: 1400px;
+        
+    }
+
+    .text-content{
+        column-count: 3;
+        /* column-rule: solid 3px navy; //No es necesario repetirlo xq ya lo toma de la anterior*/
+        
+    }
+
+
+}

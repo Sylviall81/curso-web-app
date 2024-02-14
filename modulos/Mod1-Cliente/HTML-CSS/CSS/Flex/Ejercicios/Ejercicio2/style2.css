@@ -1,0 +1,173 @@
+*{
+    font-family: 'Work Sans', sans-serif;
+    margin:0;
+    box-sizing: border-box;
+
+}
+
+.full-container{
+    border: black solid 1px;
+    margin-left: auto;
+	margin-right: auto;
+    width: 99%;
+   
+    
+
+}
+
+
+
+.header{
+    border:none;
+    background-image: url(https://www.shutterstock.com/image-vector/digital-technology-banner-green-blue-600nw-2277275221.jpg) ;
+    background-repeat: no-repeat, repeat;
+    background-position: top;
+    background-size: cover;
+    color: white;
+    width:100%;
+    height:20vh;
+    margin-bottom: 3%;;
+    position:relative;
+}
+
+.main-title{
+    font-weight: 600;
+    font-size: 3vh;
+    position: absolute;
+    bottom: 20%;
+    right: 0%;
+
+}
+
+
+.main-content{
+    display:flex;
+    flex-direction: column;
+    padding: 3vh;
+    align-items: center;
+    align-content: center;
+    gap: 15px;
+    width: 99%;
+   
+    
+}
+
+.product-card{
+    padding: 8px;
+    justify-content: space-around;
+    border: gray solid 1px;
+    width:75%;
+    height: 28vh;
+    flex-direction: column;
+    text-align: center;
+    
+
+}
+.product-img {
+    width:100%;
+    margin: 0 auto;
+    overflow: hidden;
+    object-fit: cover;/*evita q se deforme*/
+    /* max-height: 20vh;
+    max-width: auto; */
+}
+
+.product-title {
+    display: inline-block;
+    margin: 0 auto;
+    
+}
+
+
+
+
+.secondary-title{
+    color: navy;
+} 
+
+
+.sidebar{
+    width:100%;
+    display: inline-block;
+    position:absolute;
+    /* left: 73%; */
+    vertical-align: top;
+   
+}
+
+
+
+input{
+    width:85%;
+}
+.sign-in-form{
+    padding:3%;
+    width: 170px;
+   
+   gap:6px;
+   border: navy 2px solid;
+   color: navy;
+
+}
+
+.send-button{
+    background-color: navy;
+    margin-top: 10%;
+    color:white;
+    width: 89%;
+
+}
+
+.social-network-box{
+    position: fixed;
+    color:black;
+    font-weight: 600;
+    bottom:0;
+    right:60;
+}
+
+
+/* @media all and (min-width: 400px) {
+	.product-img {
+		width: calc(50% - 10px);
+	} correccion revisar
+} */
+
+
+@media all and (min-width:768px){
+
+    .main-content{
+        
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 70%;
+        float:left;
+        padding: 10px;
+    }
+
+    .product-card{
+        padding: 8px;
+        width:30%;
+        height: 30vh;
+        
+    }
+
+    .sidebar{
+        margin-top: 10px;
+        width:35%;
+        display: inline-block;
+        position:absolute;
+        /* left: 73%; */
+        vertical-align: top;
+       
+    }
+
+}
+
+@media all and (min-width: 1024px){
+
+
+
+}
+
+

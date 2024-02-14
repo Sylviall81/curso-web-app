@@ -1,0 +1,336 @@
+* {
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+ul {
+  padding: 0px;
+}
+
+h1,h2,h3 {
+  font-weight: 400;
+}
+
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5%;
+  margin: 0 auto;
+  text-align: center;
+  height: fit-content;
+}
+
+.menu a {
+  color: white;
+}
+
+.menu li {
+  background-color: navy;
+  border: white solid 0.5px;
+  width: 70%;
+  height: 20px;
+  border: navy double 1px;
+
+  margin: 6px auto;
+  text-align: center;
+  font-weight: 600;
+  /* Para eliminar el borde predeterminado del botón */
+  cursor: pointer;
+
+}
+
+h3 {
+  width: 55%;
+  text-align: center;
+  margin: 0 auto;
+  color: navy;
+}
+
+.content-section {
+  width: 100%;
+  background-color: transparent;
+  margin: 20px auto;
+}
+
+video {
+  width: 80%;
+}
+
+iframe {
+  width: 80%;
+}
+
+.video-container {
+  position: relative;
+  object-fit: cover;
+  width: 100%;
+  margin-bottom: 60px;
+
+  /* border: black solid 1px; */
+}
+
+.video-container::after {
+  content: "Descubre la Patagonia, reserva tu vuelo ahora!";
+  color: navy;
+  font-size: 1em;
+  position: absolute;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 50%;
+  border: 0.2px black solid;
+  right: 8px;
+  bottom: -20px;
+}
+
+.table {
+  background-color: grey;
+  color: navy;
+  width: 70%;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.column-left {
+  display: inline-block;
+  width: 45%;
+  margin-right: 0;
+  border-right: none;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.column-left li:nth-child(2n + 1) {
+  background-color: darkgrey;
+  color:red;
+}
+
+.column-right {
+  box-sizing: border-box;
+  margin-left: 0;
+  border-left: none;
+  width: 45%;
+  display: inline-block;
+  background-color: white;
+}
+
+.column-right li:nth-child(2n + 1) {
+  background-color: darkgrey;
+  color:red;
+}
+
+.table li:hover {
+  background-color: blue;
+  color: white;
+}
+
+
+#ejercicio3 h4 {
+  margin-bottom: 70px;
+}
+
+
+
+.polaroid-frame {
+  margin:0 auto;
+  width: 180px;
+  height: 200px;
+  padding: 20px;
+  padding-bottom: 50px;
+  background-color: whitesmoke;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  z-index:0;
+}
+
+.polaroid-frame p {
+  margin-top: 0;
+}
+
+
+.polaroid-photo {
+  background-image: url("https://placehold.co/600x400/orange/white");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  width: 95%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+#ejercicio3 div:nth-child(n + 1) {
+  transform: rotate(15deg) translateY(-25px);
+}
+#ejercicio3 div:nth-child(2n + 2) {
+  transform: rotate(351deg) translateY(10px);
+}
+
+#pic1 .polaroid-photo,
+#pic3 .polaroid-photo,
+#pic5 .polaroid-photo {
+  background-image: url("https://placehold.co/600x400/blue/white");
+}
+
+
+
+#ejercicio3 .polaroid-frame:hover {
+  background-color: white;
+  z-index: 100;
+}
+
+.landscape-photo{
+  background-image: url(https://www.shutterstock.com/image-photo/natural-lake-aerial-panorama-mountain-260nw-1788833264.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: whitesmoke 8px solid; 
+  margin: 20px auto;
+  width:80%;
+  height: 90px;
+  /* box-shadow: 0 4px 8px 0 rgba(84, 79, 79, 0.2), 0 6px 20px 0 rgba(84, 79, 79, 0.19); */
+  position: relative;
+  
+}
+
+.landscape-photo::before,
+.landscape-photo::after{ 
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 8px;
+    right: 8px;
+    height: 16px;
+    background: linear-gradient(to right, rgba(2, 2, 2, 0.3), transparent);
+    transform: rotate(-2deg);
+    z-index: -1;
+}
+
+.landscape-photo::after {
+  
+    bottom: -8px;
+    /* top: -8px; */
+    background: linear-gradient(to left, rgba(84, 79, 79, 0.1), transparent);
+    transform: rotate(2deg);
+}
+
+
+
+@media all and (min-width: 768px) {
+  .menu li {
+    display: inline-block;
+    width: 10%;
+  }
+
+  iframe {
+    height: 303px;
+  }
+
+  .video-container::after {
+    height: 35%;
+    width: 28%;
+    font-size: 1.3em;
+    padding: 2%;
+    box-sizing: content-box;
+  }
+
+  .table {
+    width: 50%;
+  }
+
+  #ejercicio3 h4 {
+    margin-bottom: 80px;
+    
+  }
+
+  .polaroid-frame {
+    display: inline-block;
+    
+  }
+
+  .landscape-photo{
+    
+    width:80%;
+    height: 200px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+  }
+
+
+}
+
+@media all and (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .table {
+    width: 30%;
+  }
+
+  iframe{
+    height: 475px;
+  }
+
+  .video-container::after {
+    height: 25%;
+    width: 20%;
+    font-size: 1.8em;
+    padding: 2%;
+    box-sizing: content-box;
+  }
+
+  #ejercicio3 {
+    max-width: 800px;
+  }
+
+  #ejercio3 h3:first-child {
+    margin-bottom: 50px;
+  }
+
+  /* .polaroid-frame {
+    display: inline-block;
+   
+  } */
+
+  /* #pic1 {
+    transform: rotate(-12deg) translateX(40px);
+
+  }
+
+  #pic2 {
+    transform: rotate(8deg) translate();
+    
+  }
+
+  #pic3 {
+    transform: rotate(16deg) translate(-40px, 35px);
+  }
+
+  #pic4 {
+    transform: rotate(-20deg);
+    
+  }
+
+  #pic5 {
+    transform: rotate(12deg);
+    
+  }
+
+  #pic6 {
+    transform: rotate(5deg);
+    
+  } */
+
+  /* .polaroid-frame:hover{
+    z-index: 100;
+    background-color: white; 
+  }*/
+
+
+  
+}

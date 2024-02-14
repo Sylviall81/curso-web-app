@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="estilos-solucion.css">
+</head>
+<body>
+<form action="" method="post">
+	<div class="fila">
+		<label class="colizq">Nombre:</label>
+		<div class="colder">
+			<input type="text" name="name" placeholder="Pon tu nombre" required style="width: 211px;">
+			<label>Fec. Nac.</label>
+			<input type="date" name="fecnac">
+			<label>DNI</label>
+			<input type="text" name="dni">
+		</div>
+	</div>
+	<div class="fila">
+		<label class="colizq">Apellidos:</label>
+		<div class="colder">
+			<input type="text" name="apellidos" placeholder="Pon tu apellido" class="ancho100">
+		</div>
+	</div>	
+	<div class="fila">
+		<label class="colizq">Estado civil:</label>
+		<div class="colder">
+			<select name="estadoCivil">
+				<option value="C">Casado</option>
+				<option value="S">Soltero</option>
+			</select>
+			<input type="radio" value="H" name="genero"><label>Hombre</label>
+			<input type="radio" value="M" name="genero"><label>Mujer</label>
+			<input type="radio" value="I" name="genero"><label>NS/NC</label>
+		</div>
+	</div>
+	<div class="fila">
+		<label class="colizq idiomas padding35">Idiomas:</label>
+		<div class="colder idiomas">
+			<div class="fondoazul">
+				<input type="checkbox" name="idiomas" value="es"><label>Español</label><br>
+				<input type="checkbox" name="idiomas" value="de"><label>Aleman</label><br>
+				<input type="checkbox" name="idiomas" value="en"><label>Inglés</label><br>		
+				<input type="checkbox" name="idiomas" value="fr"><label>Francés</label>
+			</div>
+		</div>
+	</div>
+	<div class="fila">
+		<label class="colizq comentarios" style="padding-top: 25px;">Comentarios personales:</label>
+		<div class="colder comentarios">
+			<textarea name="comentarios" class="ancho100"></textarea>
+		</div>
+	</div>	
+	<div class="fila">
+		<label class="colizq" style="background-color: red;">Pulse aquí</label>
+		<div class="colder" style="text-align:center;">
+			<input type="submit" name="enviar" value="Enviar">
+			<input type="reset" name="reset" value="Reset">
+		</div>
+	</div>	
+</form>
+</body>
+</html>
+
+
+
+
+

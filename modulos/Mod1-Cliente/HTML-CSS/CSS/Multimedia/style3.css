@@ -1,0 +1,36 @@
+
+
+.slider {
+  position: relative;
+  width: 600px; /* ajusta el tamaño según tus necesidades */
+  overflow: hidden;
+  height: 400px;
+  margin: 0 auto;
+}
+  
+  figure {
+    display: flex;
+    width: 500%; /* 100% por imagen (5 imágenes) */
+    margin: 0;
+    padding: 0;
+    left:0;
+    animation: moverSlider 15s infinite linear; /* Ajusta la duración según tus necesidades */
+  }
+  
+  .slide {
+    width: 20%;
+    height: auto;
+     /* Ajusta el comportamiento del tamaño de la imagen */
+  }
+  
+  @keyframes moverSlider {
+    0% { left: 0; }
+    20% { left: 0; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+  }

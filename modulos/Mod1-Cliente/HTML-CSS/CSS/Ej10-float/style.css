@@ -1,0 +1,32 @@
+main{
+    max-width: 1200px;
+    height:50vh;
+    border: black 1px solid;
+}
+
+.caja1, .caja2 {
+    margin-top: 30px;
+    width: 400px;
+    background-color: lightgreen;
+    border: 1px solid black;
+    float:left;    
+}
+
+
+.caja3{
+    background-color:lightgoldenrodyellow;
+    margin-top:40px;
+    width:280px;
+    float: right;
+
+}
+
+.caja4{
+    clear:both;
+}
+
+/* .novisible{
+    /* display:none;
+    visibility:hidden; 
+} */
+

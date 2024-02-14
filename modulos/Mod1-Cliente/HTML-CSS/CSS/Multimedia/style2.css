@@ -1,0 +1,347 @@
+
+.product-card, .new-card {
+    margin:5px auto 5px 20px; 
+    width: 120px;
+    height: 140px;
+    padding: 20px;
+    padding-bottom: 50px;
+    background-color: whitesmoke;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    transform: scale(0.7);
+    position: relative;
+    transition: left 2s, top 2s;/*le doy transcicion diferente a cada propiedad que cambia*/
+    /* tambien se puede hacer: transition: all 4s;*/
+    /* box-sizing: border-box;     */
+    left: 0px; /* para las transciciones de movimiento hay q poner el punto de partida 0 que es la posicion inicial del elemento*/
+    top:0px; 
+    /* z-index:0; */
+  }
+
+.product-photo {
+    background-image: url("https://cdn.pixabay.com/photo/2017/05/13/17/31/fruit-2310212_960_720.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    width: 95%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+  }
+
+#card1 .product-photo,
+#card3 .product-photo,
+#card5 .product-photo {
+  background-image: url("https://cdn.pixabay.com/photo/2019/05/04/15/24/woman-4178302_640.jpg");
+}
+
+.product-card:hover{
+  background-color: white;
+  transform: scale(1.8);
+  z-index: 20;
+  left: 350px; 
+  top: 70px;
+ 
+}
+
+#new-card1 .product-photo,
+#new-card3 .product-photo,
+#new-card5 .product-photo {
+  background-image: url(https://cdn.pixabay.com/photo/2017/11/29/09/55/background-2985648_1280.jpg);
+}
+
+
+.close{
+  display:none;
+  font-size: 0.5em;
+  position: absolute;
+  right:10px;
+  top:0px;
+  
+} 
+
+
+
+  #ejercicio6 :target{
+    background-color: white;
+    transform: scale(1.5);
+    left: 350px; 
+    top: 50px;
+
+  }
+  #ejercicio6 div:target .close{
+    display:inline;
+
+  }
+
+
+  .acordeon-main-container{
+    background-color: whitesmoke;
+    border: black solid 1px;
+    margin: 15px auto;
+    width:75%;
+    color:navy;
+    box-sizing: border-box;
+  }
+
+  .acordeon-main-container h2{
+    margin: 0px ;
+    margin-left: 10px;
+    
+  }
+
+  .question{
+    background-color: black;
+    border: white solid 0.5px;
+    text-align: left;
+    height:30px;
+    margin:0px;
+   
+    
+  }
+  .question a{
+    color: white;
+    font-weight: 600;
+  }
+
+  .answer{
+    color:black;
+    text-align: left;
+    overflow-y: scroll;
+    margin:0px;
+    width:100%;
+    height: 15%;
+    padding: 15px;
+    box-sizing: border-box;
+    display: none;
+    max-height: 100px;
+  }
+
+  .answer p {
+    margin: 0px;
+  }
+
+  #ejercicio7 :target{
+    display:block;
+  
+  } 
+
+#ejercicio8{
+  background-color: lightgrey;
+  height: 400px;
+  position:relative;
+}
+
+.foto-giratoria{
+
+  background-image: url(https://pixabay.com/es/photos/image-8492812/);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto; 
+   
+    /* animation: rotation 5s infinite; */
+    
+
+}
+
+/* @keyframes rotacion {
+
+  from {
+    transform: scale (0.25) translateX(0) translateY(0);
+    opacity:0;
+  }
+  to {
+    transform: rotate(360deg) scale(2) translateX(100px) translateY(0);
+    top: 50%;
+    left: 50%;
+    opacity:1;
+  } */
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .animated-photo{
+    background-image: url(https://www.shutterstock.com/image-vector/vector-triangle-pattern-background-kaleidoscope-600nw-308263703.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto; 
+    position:absolute;
+    left:50%;
+    top:35%;
+  
+  
+  
+   
+    /* animation-iteration-count: infinite; */
+  }
+
+  .animated-photo:hover{
+
+    animation: recorridoCircunferencia 5s infinite;
+  }
+
+  /* @keyframes go-around {
+
+    from {
+      transform: rotate(0deg) scale (0.25) translateX(0) translateY(0);;
+      top: 0;
+      left: 50%;
+      opacity:0;
+    }
+    to {
+      transform: rotate(360deg) scale(2) translateX(100px) translateY(0);
+      top: 50%;
+      left: 50%;
+      opacity:1;
+    }
+
+  }
+
+
+  @keyframes circunferencia {
+
+    from {
+      transform: scale (0.25) translateX(0) translateY(0);
+      opacity:0;
+    }
+    to {
+      transform: rotate(360deg) scale(2) translateX(100px) translateY(0);
+      top: 50%;
+      left: 50%;
+      opacity:1;
+    }
+
+  }
+
+  /* @keyframes movercirculo {
+    
+      0%   { transform: translateX(0) translateY(0); opacity: 0}
+      10%  { transform: translateX(0) translateY(50px); opacity: 0.25}
+      40%  { transform: translateX(50px) translateY(50px); opacity:0.50}
+      60%  { transform: translateX(-50px) translateY(50px); opacity:0.75}
+      100% { transform: translateX(0px) translateY(50px); opacity:1}
+  } */ 
+
+  @keyframes recorridoCircunferencia {
+    0% { transform: rotate(0deg) translateX(100px) rotate(0deg); opacity:0}
+    100% { transform: rotate(360deg) translateX(100px) rotate(-360deg);opacity:1 }
+}
+
+
+
+
+
+/** animacion.html**/
+
+.wrapper{
+  padding: 20px;
+  box-sizing: content-box;
+  width:100%;
+  height: 800px;
+  background-color: antiquewhite;
+}
+
+.contenedor {
+  width: 25%;
+  margin: 0 auto;
+}
+
+.contenedor:hover {
+  animation: parpadeo 2s infinite;
+}
+
+form {
+  padding: 20px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 95%;
+  padding: 8px;
+  margin-bottom: 15px;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+
+@keyframes parpadeo {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/********************+/
+
+  
+
+
+
+  
+
+
+
+   
+
+
+  
+
+
+  @media all and (min-width: 768px){
+
+    #ejercicio6 :target{
+      background-color: white;
+      transform: scale(1.5);
+      left: 350px; 
+      top: 10px;
+  
+    }
+
+  }
+
+  @media all and (min-width: 1024px){
+
+    
+  }
+
+
+  
+ 
+
+
+
