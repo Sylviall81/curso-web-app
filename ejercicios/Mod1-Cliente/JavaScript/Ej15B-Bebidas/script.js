@@ -1,32 +1,26 @@
 function main() {
 
-    let userNum = Number(document.getElementById('user-number').value);
-    console.log(userNum, typeof (userNum));
+    let userItem = document.getElementById('user-string').value;
+    console.log(userItem, typeof (userItem));
 
-    if (userNum < 1 || userNum > 3) {
-
-        mensaje = "por favor elige un número entre 1 y 3"
-    } else {
-
-        mensaje = "has elegido:" + pickListItem(userNum);
-    }
-
-    document.getElementById("respuesta").innerHTML = mensaje;
+    addListItem(userItem)
 
 }
 
-function pickListItem(num) {
+function addListItem(string) {
 
-    let userItem;
-    let fullList;
+    let fullList= document.getElementById('drink-list')
+    console.log(fullList)
 
-    fullList = document.getElementsByTagName('li');
-    console.log(fullList);
+    let newItem = document.createElement('li');
+    newItem.innerHTML = string;
+    console.log(newItem)
 
-    userItem = fullList[num - 1].textContent
+    fullList.appendChild(newItem);
 
-
-    return userItem
+    console.log("resultado", newItem.innerHTML)
+    
+    
 
 }
 
