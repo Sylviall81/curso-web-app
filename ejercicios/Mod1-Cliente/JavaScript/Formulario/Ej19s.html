@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios JS</title>
+    <link rel="stylesheet" href="../../../../assets/css/main.css">
+</head>
+<body class="is-preload" >
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<div class="inner">
+
+				<!-- Logo -->
+				<a href="../../../../index.html" class="logo">
+					<!-- <span class="symbol"><img src="../../../../images/icons/laptop-code-solid.svg" alt="" /></span> -->
+                    <span class="title">Certificación Profesional Web App Developer (FCD0210)</span>
+				</a>
+
+				
+
+			</div>
+		</header>
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<h2>Modúlo 1: ejercicios javascript</h2>
+				<h3>ejercicio 19s: Validación formularios</h3>
+	
+				<p>Realizar un formulario con los siguientes campos: </p>
+					<ul>
+
+						<li>Nombre: Obligatorio Primer apellido: Obligatorio </li>
+						<li>Segundo apellido: Obligatorio </li>
+						<li>Teléfono: Número de 9 cifras sin guiones</li>
+						<li>Fecha de nacimiento: comprobar que es una fecha</li>
+						<li>Email: comprobar formato, pero puede ser optativo. </li>
+				</ul>
+				<p>
+				<strong>Importante:</strong>El formulario no se puede enviar sino se ha seleccionado la cláusula de privacidad
+				
+				</p>
+
+				<section>
+					<h2>Formulario</h2>
+					<p>Por favor, rellena nuestro formulario.Los campos marcados con asterisco* son obligatorios</p>
+					 <form id="formulario"  onsubmit=""> 
+						<div class="row gtr-uniform">
+							<div >
+								<input type="text" name="name" id="name" value="" placeholder="Nombre*" required/>
+							</div>
+							<div >
+								<input type="text" name="last-name1" id="last-name1" value="" placeholder="Primer apellido*" required/>
+							</div>
+							<div class="col-6 col-12-xsmall">
+								<input type="text" name="last-name2" id="last-name2" value="" placeholder="Segundo apellido*" required/>
+							</div><br>
+							<div class="col-6 col-12-xsmall">
+								<input type="tel" pattern="[0-9]{9}" name="phone" id="phone" value="" placeholder="Teléfono" pattern="[0-9]{9}" required/>
+								Ingresa un número de 9 cifras sin guiones
+							</div> <br>
+							<div>
+								<label for="birthday">Fecha de nacimiento</label>
+								<input type="date" id="birthday">
+							  </div>
+
+							<div class="col-6 col-12-xsmall">
+								<input type="email" name="email" id="email" value="" placeholder="Email"/>
+							</div>
+							
+							<div class="col-12">
+								<label for="curso">Curso de interés:</label>
+								<select name="curso" id="curso">
+									<option value="html">HTML</option>
+									<option value="css">CSS</option>
+									<option value="javascript">JavaScript</option>
+									
+								</select>
+							</div>
+							<label for="turno">Turno preferido:</label>
+							<div class="col-4 col-12-small">
+								<input type="radio" id="turno-mañana" name="turno" value="mañana">
+								<label for="turno-mañana">Mañanas</label>
+							</div>
+							<div class="col-4 col-12-small">
+								<input type="radio" id="turno-tarde" name="turno" value="tarde">
+								<label for="turno-tarde">Tardes</label>
+							</div>
+							<div class="col-6 col-12-small">
+								<input type="checkbox" id="privacy" name="privacy" required>
+								<label for="privacy">Acepto las clausulas de privacidad</label>
+							</div>
+							
+							<div class="col-12">
+								<ul class="actions">
+									<li><input  onclick="validaImprime()" value="enviar" class="button primary" /></li>
+									<li><input type="reset" value="Reset" /></li>
+								</ul>
+							</div>
+						</div>
+					</form>
+					<!-- </form> -->
+
+					<div id="form-data-container">
+
+					</div>
+				</section>
+				<section>
+					<ul class="actions fit small">
+						<li><a href="./../../../../modulo1.html" class="button fit small">Volver a ejercicios JavaScript</a></li>
+						<!-- <li><a href="#" class="button fit small">Fit + Small</a></li>
+						<li><a href="#" class="button fit small">Fit + Small</a></li> -->
+					</ul>
+				</section>
+
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+
+				<section>
+					<h2>Contáctame</h2>
+					<ul id="contacto" class="icons">
+
+						<li><a href="http://wa.me/34628840747" target="_blank"
+								class="icon brands style2 fa-whatsapp"><span class="label">Whatsapp</span></a></li>
+						<li><a href="https://www.linkedin.com/in/sylviall81/" target="_blank"
+								class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/Sylviall81" target="_blank"
+								class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="tel:+34628840747" target="_blank" class="icon solid style2 fa-phone"><span
+									class="label">Phone</span></a></li>
+						<li><a href="mailto:sylviall81@gmail.com" target="_blank"
+								class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</section>
+				<ul class="copyright">
+					<li>&copy; Untitled. All rights reserved</li>
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
+
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="./script.js"></script>
+
+	
+
+</body>
+</html>
