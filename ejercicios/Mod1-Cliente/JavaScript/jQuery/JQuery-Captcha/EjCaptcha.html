@@ -6,43 +6,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Ejercicios JS</title>
 	<link rel="stylesheet" href="../../../../../assets/css/main.css">
+	<link rel="stylesheet" href="style2.css">
 	<!-- jQuery se añade x cdn o descargando fichero (en esta plantilla ya esta desscargado) e incluyendolo en vendor o entre los scripts de terceros-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 	<style>
 		
-		.container {
-		  background-color: #fff;
-		  border-radius: 8px;
-		  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-		  padding: 20px;
-		  width: 300px;
-		}
-	  
-		.container h2 {
-		  margin-bottom: 20px;
-		  text-align: center;
-		}
-	  
-		.container input[type="text"],
-		.container input[type="password"],
-		.container input[type="number"]
-		{
-		  width: calc(100% - 20px);
-		  padding: 10px;
-		  margin-bottom: 10px;
-		  border: 1px solid #ccc;
-		  border-radius: 4px;
-		}
-	  
-		.container input[type="submit"] {
-		  width:calc(100% - 20px);
-		  padding: 10px;
-		  border: none;
-		  border-radius: 4px;
-		  color: #fff;
-		  cursor: pointer;
-		}
+		
+	
 	  
 		
 	  </style>
@@ -72,7 +43,7 @@
 		<div id="main">
 			<div class="inner">
 				<h2>Modúlo 1: Ejercicios jQuery</h2>
-				<h3>Añade un captcha al formulario</h3>
+				<h4>Añade un captcha al formulario</h4>
 
 				
 				<section class="container">
@@ -86,34 +57,26 @@
 
 
 				</section>
+				<section id = "logged">
+					<div style=" width: 70%; display:flex; flex-direction: row; align-items: self-start; justify-content: space-between;">
+					<h5>Bienvenido a tu panel de usuario</h5>  	<a href="./../../../../../modulo1.html"> <strong>Logout</strong></a>
+				
+				</div>
+					
 
-					<!-- <h2>Inserta un número:</h2>
-					<form method="post" action="#"> -->
-					<!-- <div class="row gtr-uniform">
-			
-							<div class="col-6 col-12-xsmall">
-								<input type="number" id="user-number" value="" placeholder="xx" />
-							</div> -->
+				</section>
 
-					<!-- <div class="col-12">
-
-						<button class="button primary" id="main-button" />Esconder
-						Parrafos</button>
-
-
-
-					</div> -->
+				
 			</div>
-			<!-- </form> -->
+			
 
 			<h3 id="respuestaXX"></h3>
 			</section>
 			<section>
 				<ul class="actions fit small">
-					<li><a href="./../../../../../index.html" class="button fit small">Volver a ejercicios
+					<li><a href="./../../../../../modulo1.html" class="button fit small">Volver a ejercicios
 							JavaScript</a></li>
-					<!-- <li><a href="#" class="button fit small">Fit + Small</a></li>
-						<li><a href="#" class="button fit small">Fit + Small</a></li> -->
+					
 				</ul>
 			</section>
 
@@ -152,52 +115,6 @@
 
 	<!-- Scripts -->
 	<script src="./script.js"></script>
-
-	<script>
-		$('#submit').on({
-			click: function () {
-				generarCaptcha();
-				
-			}
-		})
-
-		function generarCaptcha(){
-
-			$('#form').append('<div id="modal-captcha" class="container"><p >Por favor inserta el resultado de 5+9 para verificar que eres humano</p><input id="captcha-answer" type = "number"></br> <button onclick = "clickCaptcha()" id="captcha-button" class="button small" >Enviar resultado</button></div>')
-
-		}
-
-
-		function clickCaptcha() {
-				let userAnswer = Number($('#captcha-answer').val());
-				console.log(userAnswer)
-				comprobarCaptcha(userAnswer)
-				}	
-			
-		
-
-		function comprobarCaptcha(value){
-
-		alert(value)
-
-			const rightAnswer = 14;
-
-			if (value !=rightAnswer){
-
-			$('#modal-captcha > p').html('Lo sentimos esta no es la repuesta vuelve al formulario e intenta de nuevo')
-
-				
-			} else {
-
-	
-				$('#modal-captcha > p').html('Bienvenid@, la respuesta es correcta, puedes iniciar sesión')
-				$('#modal-captcha > button').hide()
-				$('#modal-captcha > input').hide()
-
-			}
-
-		}
-	</script>
 
 </body>
 

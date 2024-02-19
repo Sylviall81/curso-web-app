@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicios JS</title>
+	<link rel="stylesheet" href="../../../../../assets/css/main.css">
+	<!-- jQuery se añade x cdn o descargando fichero (en esta plantilla ya esta desscargado) e incluyendolo en vendor o entre los scripts de terceros-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<style>
+	figure {
+		display: flex;
+		flex-direction: row;
+		inline-size: 99vw;
+		margin: 0;
+
+	}
+
+	img {
+		position: relative;
+	}
+</style>
+
+<body class="is-preload">
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<!-- <div class="inner">
+
+				 Logo -->
+			<!-- <a href="./../../../../../index.html" class="logo">
+					<span class="symbol"><img src="../../../../images/icons/laptop-code-solid.svg" alt="" /></span> -->
+			<!-- <span class="title">Certificación Profesional Web App Developer (FCD0210)</span>
+				</a> 
+			</div>  -->
+		</header>
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<h2>Modúlo 1: Ejercicios jQuery</h2>
+				<h3 style='float: left;'>Slider</h3><button id="slider-button" class="buttom small">Start</button>
+
+
+
+
+				<figure>
+					<img src="./assets/foto1.jpg" id="foto0">
+					<img src="./assets/foto2.jpg" id="foto1">
+					<img src="./assets/foto3.jpg" id="foto2">
+					<img src="./assets/foto4.jpg" id="foto3">
+					<img src="./assets/foto1.jpg" id="foto4">
+				</figure>
+
+
+
+
+				<!-- <h2>Inserta un número:</h2>
+					<form method="post" action="#"> -->
+				<!-- <div class="row gtr-uniform">
+			
+							<div class="col-6 col-12-xsmall">
+								<input type="number" id="user-number" value="" placeholder="xx" />
+							</div> -->
+
+				<!-- <div class="col-12">
+
+						<button class="button primary" id="main-button" />Esconder
+						Parrafos</button>
+
+
+
+					</div> -->
+			</div>
+			<!-- </form> -->
+
+			<h3 id="respuestaXX"></h3>
+			</section>
+			<section>
+				<ul class="actions fit small">
+					<li><a href="./../../../../../index.html" class="button fit small">Volver a ejercicios
+							JavaScript</a></li>
+					<!-- <li><a href="#" class="button fit small">Fit + Small</a></li>
+						<li><a href="#" class="button fit small">Fit + Small</a></li> -->
+				</ul>
+			</section>
+
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+
+			<section>
+				<h2>Contáctame</h2>
+				<ul id="contacto" class="icons">
+
+					<li><a href="http://wa.me/34628840747" target="_blank" class="icon brands style2 fa-whatsapp"><span
+								class="label">Whatsapp</span></a></li>
+					<li><a href="https://www.linkedin.com/in/sylviall81/" target="_blank"
+							class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/Sylviall81" target="_blank"
+							class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="tel:+34628840747" target="_blank" class="icon solid style2 fa-phone"><span
+								class="label">Phone</span></a></li>
+					<li><a href="mailto:sylviall81@gmail.com" target="_blank"
+							class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+			</section>
+			<ul class="copyright">
+				<li>&copy; Untitled. All rights reserved</li>
+				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+	</footer>
+
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="./script.js"></script>
+
+	<script>
+		$('#slider-button').on('click', function () {
+			animarSlider();
+
+		})
+
+		function animarSlider() {
+			let slideLength = $('figure > img').length;
+			console.log(slideLength);
+
+			let index = 0;
+
+			for(i=0; i <slideLength ; i++){
+				index=i
+				animarSiguiente(index)
+			}
+
+		}
+
+		function animarSiguiente(index,val) {
+        if (index < slideLength) {
+            animarFoto(index);
+            let next=index++;
+            // Llama recursivamente a animarSiguiente después de un tiempo de espera
+            setTimeout(animarSiguiente(next), 1000); // 1000 milisegundos = 1 segundos
+        }}
+
+
+
+
+		function animarFoto(index) {
+			$(`#foto${index}`).animate({
+				right: '100%'
+			});
+		}
+	</script>
+
+</body>
+
+</html>
