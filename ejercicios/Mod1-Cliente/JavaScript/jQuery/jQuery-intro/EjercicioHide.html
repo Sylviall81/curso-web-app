@@ -57,7 +57,10 @@
 
 					<div class="col-12">
 
-						<button class="button primary" id="main-button" />Esconder
+						<button class="button primary" id="hide-button" />Esconder
+						Parrafos</button>
+
+						<button class="button primary" id="show-button" />Mostrar
 						Parrafos</button>
 
 
@@ -114,15 +117,24 @@
 	<script src="./script.js"></script>
 
 	<script>
+		$('#hide-button').on('click', function () {
 
-			$('#main-button').on('click', function(){
+			hideElement('p')
 
-				hideElement('p')
+		})
 
-			})
+		$('#show-button').on('click', function () {
+
+			showElement('p')
+
+		})
 
 		function hideElement(selector) {
 			$(selector).hide()
+		}
+
+		function showElement(selector) {
+			$(selector).show()
 		}
 	</script>
 
