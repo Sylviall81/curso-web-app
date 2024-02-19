@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Ejercicios JS</title>
 	<link rel="stylesheet" href="../../../../../assets/css/main.css">
-	<!-- jQuery se añade x cdn o descargando fichero (en esta plantilla ya esta desscragado) e incluyendolo en vendor o entre los scripts de terceros-->
+	<!-- jQuery se añade x cdn o descargando fichero (en esta plantilla ya esta desscargado) e incluyendolo en vendor o entre los scripts de terceros-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 	<style>
@@ -25,7 +25,9 @@
 		}
 	  
 		.container input[type="text"],
-		.container input[type="password"] {
+		.container input[type="password"],
+		.container input[type="number"]
+		{
 		  width: calc(100% - 20px);
 		  padding: 10px;
 		  margin-bottom: 10px;
@@ -75,13 +77,12 @@
 				
 				<section class="container">
 						<h2>Iniciar Sesión</h2>
-						<form>
+						<div id="form">
 						  <input type="text" name="username" placeholder="Usuario" required>
 						  <input type="password" name="password" placeholder="Contraseña" required>
-						  <input type="submit" value="Iniciar Sesión">
-						</form>
-					  </div>
-
+						  <input id= 'submit' type="submit" value="Iniciar Sesión">
+						</div>
+					
 
 
 				</section>
@@ -153,19 +154,49 @@
 	<script src="./script.js"></script>
 
 	<script>
-		$('p').on({
-			mouseenter: function () {
-				$(this).css("background-color", "lightgray");
-			},
-			mouseleave: function () {
-				$(this).css("background-color", "lightblue");
-			},
+		$('#submit').on({
 			click: function () {
-				$(this).css("background-color", "yellow");
+				generarCaptcha();
+				
+			}
+		})
+
+		function generarCaptcha(){
+
+			$('#form').append('<div id="modal-captcha" class="container"><p >Por favor inserta el resultado de 5+9 para verificar que eres humano</p><input id="captcha-answer" type = "number"></br> <button onclick = "clickCaptcha()" id="captcha-button" class="button small" >Enviar resultado</button></div>')
+
+		}
+
+
+		function clickCaptcha() {
+				let userAnswer = Number($('#captcha-answer').val());
+				console.log(userAnswer)
+				comprobarCaptcha(userAnswer)
+				}	
+			
+		
+
+		function comprobarCaptcha(value){
+
+		alert(value)
+
+			const rightAnswer = 14;
+
+			if (value !=rightAnswer){
+
+			$('#modal-captcha > p').html('Lo sentimos esta no es la repuesta vuelve al formulario e intenta de nuevo')
+
+				
+			} else {
+
+	
+				$('#modal-captcha > p').html('Bienvenid@, la respuesta es correcta, puedes iniciar sesión')
+				$('#modal-captcha > button').hide()
+				$('#modal-captcha > input').hide()
+
 			}
 
-
-		})
+		}
 	</script>
 
 </body>
