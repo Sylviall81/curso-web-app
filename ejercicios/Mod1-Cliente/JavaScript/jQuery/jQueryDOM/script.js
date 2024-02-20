@@ -97,7 +97,7 @@ $('#tile3').hover(function () {
 
 
 $('#tile6').hover(function () {
-    $(this).html('<button class="fit small">ChangeBg</button>')
+    $(this).html('<button class="fit small">GRAY</button>')
 });
 
 
@@ -107,7 +107,7 @@ $('#tile6').on('click', function () {
 
 $('#tile1').on('mouseenter', function () {
     $(this).css('background-color', 'white');
-    $(this).html('click here and erase tile 5');
+    $(this).html('click and erase tile 5, next click 8');
 });
 
 $('#tile1').on('click', function () {
