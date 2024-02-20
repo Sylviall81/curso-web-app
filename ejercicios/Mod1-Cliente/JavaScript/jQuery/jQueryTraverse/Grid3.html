@@ -10,36 +10,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 </head>
-<style>
 
-.grid-grandpa{
-    display: grid;
-	margin: 0 auto;
-	width:60%;
-}
-
-.grid-father{
-    display: grid;
-	margin: auto;
-	width:60%;
-	height: 70%;
-    grid-template-columns: repeat(2, 100px); /* Tamaño de las columnas */
-    grid-template-rows: repeat(2, 100px); /*Tamaño de las filas*/
-    gap: 30px; /* Espacio entre celdas */
-	align-items: center;
-	justify-content: center;
-
-}
-
-.hide{
-	display:none;
-}
-
-.grid-item {
-    background-color: #ffffff; /* Color de fondo blanco */
-    border: 1px solid #cccccc; /* Borde gris claro */
-}
-</style>
 
 <body class="is-preload">
 	<!-- Wrapper -->
@@ -63,12 +34,11 @@
 		<!-- Main -->
 		<div id="main">
 			<div id= "unico" class="inner">
-				<h2>Ejercicio jQuery: Grid</h2>
-				<p>Haz un grid que cada celda tenga un color diferente con un bucle .each() y una de ellasn tenga una imagen. 
-					Al pulsarlas o pasar el ratón encima de ellas, realiza distintas acciones jQuery.</p>
+				<h2>Ejercicio jQuery: Traverse</h2>
+				<p>Dado 4 divs uno de ellos padre y tres descendientes de los cuales solo dos de ellos son hermanos, dales estilos a traves de jQuery sin utilizar selectores y solo a traves de los metodos traverse( .child() .find() .parent() etc..)</p>
 				
 					
-					<div >
+					<div>
 						<div>
 
 							<div >2</div>

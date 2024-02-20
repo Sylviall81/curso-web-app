@@ -14,13 +14,14 @@
 	figure {
 		display: flex;
 		flex-direction: row;
-		inline-size: 99vw;
 		margin: 0;
 
 	}
 
 	img {
 		position: relative;
+		inline-size: 80vw;
+		display: none;
 	}
 </style>
 
@@ -126,42 +127,7 @@
 	<!-- Scripts -->
 	<script src="./script.js"></script>
 
-	<script>
-		$('#slider-button').on('click', function () {
-			animarSlider();
-
-		})
-
-		function animarSlider() {
-			let slideLength = $('figure > img').length;
-			console.log(slideLength);
-
-			let index = 0;
-
-			for(i=0; i <slideLength ; i++){
-				index=i
-				animarSiguiente(index)
-			}
-
-		}
-
-		function animarSiguiente(index,val) {
-        if (index < slideLength) {
-            animarFoto(index);
-            let next=index++;
-            // Llama recursivamente a animarSiguiente después de un tiempo de espera
-            setTimeout(animarSiguiente(next), 1000); // 1000 milisegundos = 1 segundos
-        }}
-
-
-
-
-		function animarFoto(index) {
-			$(`#foto${index}`).animate({
-				right: '100%'
-			});
-		}
-	</script>
+	
 
 </body>
 
