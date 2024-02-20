@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicios JS</title>
+	<link rel="stylesheet" href="../../../../../assets/css/main.css">
+	<!-- jQuery se añade x cdn o descargando fichero (en esta plantilla ya esta desscragado) e incluyendolo en vendor o entre los scripts de terceros-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<style>
+
+.grid-grandpa{
+    display: grid;
+	margin: 0 auto;
+	width:60%;
+}
+
+.grid-father{
+    display: grid;
+	margin: auto;
+	width:60%;
+	height: 70%;
+    grid-template-columns: repeat(2, 100px); /* Tamaño de las columnas */
+    grid-template-rows: repeat(2, 100px); /*Tamaño de las filas*/
+    gap: 30px; /* Espacio entre celdas */
+	align-items: center;
+	justify-content: center;
+
+}
+
+.hide{
+	display:none;
+}
+
+.grid-item {
+    background-color: #ffffff; /* Color de fondo blanco */
+    border: 1px solid #cccccc; /* Borde gris claro */
+}
+</style>
+
+<body class="is-preload">
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<div class="inner">
+
+				<!-- Logo -->
+				<a href="./../../../../../index.html" class="logo">
+					<!-- <span class="symbol"><img src="../../../../images/icons/laptop-code-solid.svg" alt="" /></span> -->
+					<span class="title">Certificación Profesional Web App Developer (FCD0210)</span>
+				</a>
+
+
+
+			</div>
+		</header>
+
+		<!-- Main -->
+		<div id="main">
+			<div id= "inner" class="inner">
+				<h2>Ejercicio jQuery: Grid</h2>
+				<p>Haz un grid que cada celda tenga un color diferente con un bucle .each() y una de ellasn tenga una imagen. 
+					Al pulsarlas o pasar el ratón encima de ellas, realiza distintas acciones jQuery.</p>
+				
+					
+					<div id = "grandpa" class="grid-grandpa">
+						<div id="father" class="grid-father">
+
+							<div id="child1" class="grid-item">2</div>
+							<div id="child2" class="grid-item">3</div>
+
+						</div>
+						
+						
+					</div>
+<br>
+					
+				
+
+					
+					
+			<!-- </form> -->
+
+			<h3 id="respuestaXX"></h3>
+			</section>
+			<section>
+				<ul class="actions fit small">
+					<li><a href="./../../../../../modulo1.html" class="button fit small">Volver a ejercicios
+							JavaScript</a></li>
+					<!-- <li><a href="#" class="button fit small">Fit + Small</a></li>
+						<li><a href="#" class="button fit small">Fit + Small</a></li> -->
+				</ul>
+			</section>
+
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+
+			<section>
+				<h2>Contáctame</h2>
+				<ul id="contacto" class="icons">
+
+					<li><a href="http://wa.me/34628840747" target="_blank" class="icon brands style2 fa-whatsapp"><span
+								class="label">Whatsapp</span></a></li>
+					<li><a href="https://www.linkedin.com/in/sylviall81/" target="_blank"
+							class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/Sylviall81" target="_blank"
+							class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="tel:+34628840747" target="_blank" class="icon solid style2 fa-phone"><span
+								class="label">Phone</span></a></li>
+					<li><a href="mailto:sylviall81@gmail.com" target="_blank"
+							class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+			</section>
+			<ul class="copyright">
+				<li>&copy; Untitled. All rights reserved</li>
+				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+	</footer>
+
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="./script.js"></script>
+
+
+		
+
+</body>
+
+</html>
