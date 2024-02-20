@@ -127,3 +127,18 @@ $('#tile7').on({
     
     }
 });
+
+
+$('#clean').on({
+   
+    click: function () {
+        $('.grid-item').html('');
+        $('.grid-item').css({'background-color':'white',
+    'background-image':'url(https://placehold.co/100x100/white/white',
+    'border':'1px solid lightgray'
+});
+    }
+
+
+})
+
