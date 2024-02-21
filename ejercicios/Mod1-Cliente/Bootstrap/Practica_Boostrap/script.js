@@ -15,12 +15,12 @@ $('#welcome-header').css({
 //gestion del modal y el captcha
 
 $(document).ready(function(){
+
     $('#myModal').modal('show');
 
     $('#myModal').on('hidden.bs.modal',  function(){
         submitForm();
     });
-
 
 
   });
@@ -66,36 +66,12 @@ $(document).ready(function(){
             $('#myModal').show();
             $('#submit-button').on('click',function(){
                 submitForm();
-
             })
           
             
         }
     
 
-
-    // if (captcha != rightCaptcha){
-    //     $('#myModal').append('<div class="alert alert-danger alert-dismissible">'+
-    //     '<button type="button" class="close" data-dismiss="alert">&times;</button>'+
-    //     '<strong>Error</strong> El resultado de la suma no es correcto, vuelve a intentarlo.</div>'
-    //     )
-    //     $('#myModal').modal('show');
-
-    // }else if( email != rightEmail || pwd != rightPwd){
-
-    //     $('#myModal').append('<div class="alert alert-danger alert-dismissible">'+
-    //     '<button type="button" class="close" data-dismiss="alert">&times;</button>'+
-    //     '<strong>Error</strong> El usuario o contraseña son incorrectos</div>'
-    //     )
-    //     $('#myModal').modal('show');
-
-
-    // } else {
-    //     $('#myModal').hide()
-    // }
-
-    
-
-  }
+    }
 
 
