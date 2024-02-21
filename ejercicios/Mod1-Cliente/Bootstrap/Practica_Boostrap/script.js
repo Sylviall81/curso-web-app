@@ -25,6 +25,10 @@ $(document).ready(function(){
 
   });
 
+//   $('#myModal').on('shown.bs.modal', function () {
+//     $('#myInput').trigger('focus')
+//   })
+
 
   
   function submitForm(){
@@ -37,13 +41,20 @@ $(document).ready(function(){
     let email = $('#email').val();
     let pwd = Number($('#pwd').val());
     let captcha = $('#captcha').val();
+    let storeLoginData= $('#agree').is(":checked"); //guarda el checked como true
 
-    console.log('verifico:', email, captcha, pwd)
+    console.log('verifico:', email, captcha, pwd, storeLoginData)
 
 
     if (captcha == rightCaptcha && email == rightEmail && pwd == rightPwd) {
             
+        if(storeLoginData){
+            localStorage.setItem('user',email);
+
             $('#myModal').hide();
+        }
+
+           
     
      }else if( captcha != rightCaptcha){
 
@@ -73,5 +84,15 @@ $(document).ready(function(){
     
 
     }
+
+    // Si no hay guardada variable local "Storage" 
+    if (!localStorage.getItem('user'))
+    // Mostrar modal
+    $("#login").modal('show');
+    // Cuando se oculta el modal, llamamos a la función de validación del formulario
+    $("#login").on("hidden.bs.modal", function () {
+        submitForm();
+    });
+   localStorage.clear();
 
 
