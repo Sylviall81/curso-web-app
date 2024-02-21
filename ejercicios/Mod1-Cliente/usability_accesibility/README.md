@@ -6,6 +6,8 @@
 
 - **VoiceOver**: Es el lector de pantalla integrado en los dispositivos de Apple, incluyendo Mac, iPhone y iPad. Proporciona funcionalidades completas para la navegación y el acceso a contenido. Aquí puedes descargar una [guia de gestos y teclas de VoiceOver](https://www.once.es/cti/biblioteca/Accesibilidad/iOS/Gestos_Teclas_VoiceOver_iOS14_abril_2021.pdf) realizada por la ONCE 
 
+- [JAWS](https://www.freedomscientific.com/products/software/jaws/):  es el lector de pantalla más popular del mundo, desarrollado para usuarios de computadoras cuya pérdida de visión les impide ver el contenido de la pantalla o navegar con un ratón. JAWS proporciona salida de voz y Braille para las aplicaciones informáticas más populares en tu PC. Podrás navegar por Internet, escribir un documento, leer un correo electrónico y crear presentaciones desde tu oficina, escritorio remoto o desde casa.
+
 ## Extensiones de navegador
 
 - [Wave Web Accessibility Evaluation Tool](https://wave.webaim.org/): Wave Evaluation Tool es una extensión de navegador que proporciona una evaluación rápida de la accesibilidad de una página web.
