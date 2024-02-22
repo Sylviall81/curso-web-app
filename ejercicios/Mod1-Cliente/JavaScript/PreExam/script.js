@@ -1,19 +1,20 @@
-const arrayItems = ['pizza', 'hamburguesa'];
+const arrayItems = [];
+let itemIndex;
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
     refreshList();
-   
-  });
+
+});
 
 
- 
 
-  function refreshList (){
 
-    arrayItems.forEach(function(item) {
+function refreshList() {
+
+    arrayItems.forEach(function (item) {
         let listItem = document.createElement('li'); // Crear un nuevo elemento <li>
         let fullList = document.getElementById('ordered-list');
         listItem.textContent = item; // Establecer el contenido del <li> como el elemento del array
@@ -33,28 +34,29 @@ function main(num) {
 
     let userItem = document.getElementById('user-item').value.toLowerCase();
     console.log(userItem);
-    
+
     switch (num) {
 
         //Añadir Item
         case 1:
 
-        if (userItem === "" ){
-            alert("no pudes insertar un elemento vacio en la lista")
-        } else {
-            addItem(userItem);
-            clearInput('user-item')}
+            if (userItem === "") {
+                alert("no pudes insertar un elemento vacio en la lista")
+            } else {
+                addItem(userItem);
+                // clearInput('user-item')
+            }
 
             break;
 
             //Borrar Item
         case 2:
 
-        if (userItem === "" ){
-            alert("escribe un elemento para poder borrarlo")
-        } else {
-            eraseItem(userItem);
-        }
+            if (userItem === "") {
+                alert("escribe un elemento para poder borrarlo")
+            } else {
+                eraseItem(userItem);
+            }
 
             break;
 
@@ -74,7 +76,16 @@ function main(num) {
 
 
 
+function comprobarLista(item){
 
+    let itemIndex = arrayItems.findIndex((elemento) => elemento === item);
+
+    
+    console.log(itemIndex)
+
+    return itemIndex;
+
+}
 
 
 
@@ -82,13 +93,23 @@ function main(num) {
 
 function addItem(item) {
 
-    arrayItems.push(item);
-    console.log(arrayItems);
 
-    let listItem = document.createElement('li'); // Crear un nuevo elemento <li>
+    itemIndex = comprobarLista(item);
+    console.log(itemIndex);
+    
+
+
+    if(itemIndex == -1){ 
+        
+        arrayItems.push(item);
+        let listItem = document.createElement('li'); // Crear un nuevo elemento <li>
         let fullList = document.getElementById('ordered-list');
-        listItem.textContent = arrayItems[arrayItems.length-1]// Establecer el contenido del <li> como el elemento del array
-        fullList.appendChild(listItem);
+        listItem.textContent = arrayItems[arrayItems.length - 1]; // Establecer el contenido del <li> como el elemento del array
+            fullList.appendChild(listItem)
+    }else{
+        alert('El elemento ya existe en la lista y no puede ser duplicado');
+        clearInput('user-item');
+    }
 
 
 }
@@ -96,15 +117,14 @@ function addItem(item) {
 
 function eraseItem(item) {
 
-    
-    let itemIndex = arrayItems.indexOf(item);
-    console.log(itemIndex);
+
+    itemIndex = comprobarLista(item);
 
     if (itemIndex !== -1) {
 
-        let deletConfirmation = confirm(`Estas a punto de eliminar el elemento ${item} de la lista ¿Estas segur@ que quieres continuar?`)
+        let deleteConfirmation = confirm(`Estas a punto de eliminar el elemento ${item} de la lista ¿Estas segur@ que quieres continuar?`)
 
-        if (deletConfirmation) {
+        if (deleteConfirmation) {
             let liElement = document.getElementsByTagName('li')[itemIndex]; // Obtener el elemento <li> que queremos eliminar
             liElement.remove(); // Eliminar el elemento del DOM
             arrayItems.splice(itemIndex, 1);
@@ -136,13 +156,13 @@ function pickItem() {
 
         if (arrayItems.length == 0) {
             alert("Por favor, añade elementos a la lista")
-            
+
         } else {
 
             alert("Lo sentimos ese número no se encuentra en la lista, intenta de nuevo. Escoje un número del 1 al " + arrayItems.length)
             clearInput('user-number');
             clearInput('respuesta');
-       
+
         }
 
     } else {
