@@ -22,7 +22,6 @@ function addItem() {
 
     clearInput('user-item')
 
-
 }
 
 
@@ -34,11 +33,15 @@ function eraseItem() {
 
     if (itemIndex !== -1) {
 
-        let deletConfirmation = confirm(`Estas a punto de eliminar el elemento ${userItem} de la lista} ¿Estas segur@ que quieres continuar?`)
+        let deletConfirmation = confirm(`Estas a punto de eliminar el elemento ${userItem} de la lista ¿Estas segur@ que quieres continuar?`)
+        
         if (deletConfirmation) {
             let liElement = document.getElementsByTagName('li')[itemIndex]; // Obtener el elemento <li> que queremos eliminar
             liElement.remove(); // Eliminar el elemento del DOM
             arrayItems.splice(itemIndex, 1);
+            console.log(arrayItems)
+            clearInput('user-item')
+        } else{
             clearInput('user-item')
         }
     } else {
@@ -46,10 +49,32 @@ function eraseItem() {
 
         if (addNew) {
             addItem();
+            console.log(arrayItems);
         } else{
             clearInput('user-item')
         }
 
+    }
+
+}
+
+function pickItem(){
+
+    let userNumber = Number(document.getElementById('user-number').value)
+
+    if( userNumber <= 0 || userNumber > arrayItems.length){
+        
+        if(arrayItems.length == 0){
+            alert("Por favor, añade elementos a la lista")
+        } else {
+
+        alert("Lo sentimos ese número no se encuentra en la lista, intenta de nuevo. Escoje un número del 1 al "+arrayItems.length)
+        }
+
+    } else {
+
+        document.getElementById('respuesta').innerHTML = 'has escogido:'+ arrayItems[userNumber-1]
+        clearInput('user-number')
     }
 
 }
