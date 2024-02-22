@@ -1,7 +1,10 @@
 const arrayItems = [];
 
 
+
 function main(num) {
+
+ 
 
     let userItem = document.getElementById('user-item').value.toLowerCase();
     console.log(userItem);
@@ -38,6 +41,9 @@ function main(num) {
 
     }
 }
+
+
+
 
 
 
@@ -110,22 +116,25 @@ function pickItem() {
 
         if (arrayItems.length == 0) {
             alert("Por favor, añade elementos a la lista")
+            
         } else {
 
             alert("Lo sentimos ese número no se encuentra en la lista, intenta de nuevo. Escoje un número del 1 al " + arrayItems.length)
-            clearInput('user-number')
+            clearInput('user-number');
+            clearInput('respuesta');
        
         }
 
     } else {
 
         document.getElementById('respuesta').innerHTML = 'has escogido:' + arrayItems[userNumber - 1]
-        clearInput('user-number')
+        clearInput('user-number');
+        clearInput('respuesta');
     }
 
 }
 
 
 function clearInput(id) {
-    document.getElementById(id).value = "";
+    document.getElementById(id).value = " ";
 }
