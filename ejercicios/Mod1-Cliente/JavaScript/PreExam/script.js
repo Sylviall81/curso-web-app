@@ -7,7 +7,6 @@ function main(num) {
     console.log(userItem);
     
 
-
     switch (num) {
 
         //Añadir Item
@@ -33,6 +32,7 @@ function main(num) {
 
             break;
 
+            //Escoger Item
         default:
             pickItem();
 
