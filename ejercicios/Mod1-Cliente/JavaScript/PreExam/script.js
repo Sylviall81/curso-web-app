@@ -1,15 +1,39 @@
-const arrayItems = [];
+const arrayItems = ['pizza', 'hamburguesa'];
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    refreshList();
+   
+  });
+
+
+ 
+
+  function refreshList (){
+
+    arrayItems.forEach(function(item) {
+        let listItem = document.createElement('li'); // Crear un nuevo elemento <li>
+        let fullList = document.getElementById('ordered-list');
+        listItem.textContent = item; // Establecer el contenido del <li> como el elemento del array
+        fullList.appendChild(listItem); // Agregar el <li> al <ul> en el DOM
+    });
+}
+
+
+
+
+
+
 
 
 
 function main(num) {
 
- 
-
     let userItem = document.getElementById('user-item').value.toLowerCase();
     console.log(userItem);
     
-
     switch (num) {
 
         //Añadir Item
@@ -30,7 +54,6 @@ function main(num) {
             alert("escribe un elemento para poder borrarlo")
         } else {
             eraseItem(userItem);
-
         }
 
             break;
@@ -62,12 +85,10 @@ function addItem(item) {
     arrayItems.push(item);
     console.log(arrayItems);
 
-    let fullList = document.getElementById('ordered-list');
-    let listItem = document.createElement('li');
-    listItem.innerHTML = item;
-    //listItem.innerHTML = arrayItems[arrayItems.length-1]
-    fullList.appendChild(listItem);
-
+    let listItem = document.createElement('li'); // Crear un nuevo elemento <li>
+        let fullList = document.getElementById('ordered-list');
+        listItem.textContent = arrayItems[arrayItems.length-1]// Establecer el contenido del <li> como el elemento del array
+        fullList.appendChild(listItem);
 
 
 }
@@ -76,7 +97,6 @@ function addItem(item) {
 function eraseItem(item) {
 
     
-
     let itemIndex = arrayItems.indexOf(item);
     console.log(itemIndex);
 
