@@ -16,7 +16,8 @@ Para demostrar que es un humano, el usuario debe resolver la siguiente operació
 
 ## Organigrama del Proceso 📊
 
-[Organigrama propuesto:](./imagen/Captura%20de%20Pantalla%202024-02-28%20a%20la(s)%2012.51.04%20p.%20m..jpg)
+
+![Organigrama propuesto:](./imagen/Captura%20de%20Pantalla%202024-02-28%20a%20la(s)%2012.51.04%20p.%20m..jpg)
 
 
 
