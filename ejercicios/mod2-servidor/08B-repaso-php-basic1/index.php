@@ -325,9 +325,29 @@
     echo "My (again)updated shoppingList is equal to: " .json_encode ($arrShoppingList);
     $arrVeggieList =  array("Aubergine","Cucumber","Green Pepper","Spinach");
     echo "</br>";
+    $pushed_array = 
     array_push($arrShoppingList,$arrVeggieList);
+    echo "pushed:";
+    echo "<br>";
+    print_r($arrShoppingList);
+    echo "<ul>";
+
+    foreach ($arrShoppingList as $key => $value){
+        echo "<li>".$key." : ".$value."</li><br>";
+    }
+    //cuando se encuentra con la union del nuevo ya no sigue el bucle xq creo q es
+    echo "</ul>";
+
     echo " La union de mis dos arrays: ShoppingList y VeggieList es:" .json_encode ($arrShoppingList);
     $mergedArray = array_merge($arrShoppingList,$arrVeggieList);
+
     echo "</br>";
-    echo $mergedArray;
+    print_r($mergedArray);
+
+    echo "<ul>";
+
+    foreach ($mergedArray as $key => $value){
+        echo "<li>".$key." : ".$value."</li><br>";
+    }
+    echo "</ul>";
     ?>
